@@ -1,18 +1,31 @@
 import React from "react";
 import PessoaForm from "./PessoaForm";
+import { useState } from "react";
+import PageHeader from "../template/pageHeader";
+import axios from "axios";
 
+
+
+const URL = "https://localhost:3003/pessoa";
 export default (props) => {
-    function handleAdd (e){
-        e.preventDefault();
-        const formData = new FormData(e.target);
-        const data = Object.fromEntries(formData);
-        console.log(data);
-
+    function handleSubmit(values, actions) {
+        console.log(values);
+        const formData = values; 
+        handleAdd(formData);
     }
+
+    function handleAdd(data) {
+        axios.post(URL, data).then((resp) => {
+            if (resp.status === 201) {
+                alert("Pessoa cadastrada com sucesso");
+            }
+        });
+    }
+
     return (
         <div>
-            <PessoaForm 
-            handleAdd = {handleAdd} />
+            <PageHeader name="Pessoa" small="Cadastro" />
+            <PessoaForm handleSubmit={handleSubmit} />
         </div>
     );
 };

@@ -5,7 +5,7 @@ export default (props) => {
     <nav className='navbar navbar-dark bg-dark'>
     <div className='navbar-header'>
       <a href="/" className='navbar-brand'>
-        <i className='fa fa-calendar-check-o'></i> Adota Pet
+        <i className='fa fa-calendar-check-o p-3'></i> Adota Pet
       </a>
     </div>
  
