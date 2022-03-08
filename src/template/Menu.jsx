@@ -11,7 +11,7 @@ export default (props) => {
  
     <ul className='nav'>
       <li className='nav-item'>
-        <a className='nav-link navbar-brand' href="#/pessoa">Pesssoa</a>
+        <a className='nav-link navbar-brand' href="/pessoa/post">Pesssoa</a>
       </li>
       <li className='nav-item'>
         <a className='nav-link navbar-brand' href="#/about">Sobre</a>
