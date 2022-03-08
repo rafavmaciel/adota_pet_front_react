@@ -9,7 +9,6 @@ import axios from "axios";
 const URL = "https://localhost:3003/pessoa";
 export default (props) => {
     function handleSubmit(values, actions) {
-        console.log(values);
         const formData = values; 
         handleAdd(formData);
     }
