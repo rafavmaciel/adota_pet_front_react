@@ -10,12 +10,16 @@ export default (props) => {
     </div>
  
     <ul className='nav'>
+    <li className='nav-item'>
+        <a className='nav-link navbar-brand' href="/login">Login</a>
+      </li>
       <li className='nav-item'>
         <a className='nav-link navbar-brand' href="/pessoa/post">Pesssoa</a>
       </li>
       <li className='nav-item'>
         <a className='nav-link navbar-brand' href="#/about">Sobre</a>
       </li>
+      
     </ul>
   </nav>
   );
